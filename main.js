@@ -1,3 +1,4 @@
+document.addEventListener("DOMContentLoaded", () =>{
 const username = document.querySelector(".username");
 const email = document.querySelector(".email");
 const password = document.querySelector(".password");
@@ -90,3 +91,4 @@ const checkPasswordSimilarity = (input) => {
 }
 
 
+})
