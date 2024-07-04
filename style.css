@@ -1,0 +1,283 @@
+/* CSS RESET */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  outline: none;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+
+html, 
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+
+/* General style */
+
+body {
+  background-image: url(images/bg-intro-desktop.png);
+  background-color: #FF7979;
+  
+  -ms-overflow-style: none;  
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.main {  
+  /* margin: 7.563rem 10.313rem; */
+  margin: 2rem 10.313rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr ;
+  /* grid-template-rows: auto;  */
+  grid-template-rows: 3.75rem 1.5rem 5.313rem 13.063rem 10.563rem;
+  /* min-height: 100vh;   */
+}
+
+.description {
+  grid-column: 1/2;
+  grid-row: 4/6;
+  /* margin-left: 1rem; */
+}
+.header {
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 3.125rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 3.438rem;
+  letter-spacing: -0.033rem;
+  width: 525px;
+  /* height: 131px; */
+  margin-bottom: 29px;   
+}
+
+.text {
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.625rem;
+  /* line-height: 26px; */
+  width: 525px;
+}
+.wrapper {
+  grid-column: 2/3;
+  grid-row: 3/6;
+  /* margin-left: 45px; */
+}
+
+.form-type {
+  border-radius: 10px;
+  background: #5E54A4;
+  box-shadow: 0px 8px 0px 0px rgba(0, 0, 0, 0.15);
+  width: 540px;
+  height: 60px;
+  flex-shrink: 0;
+  color: #FFF;
+  /* text-align: center; */
+  font-family: Poppins;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 26px; /* 173.333% */
+  letter-spacing: 0.268px;
+
+  text-transform: uppercase;
+  grid-column: 2/3;
+  grid-row: 1/6;
+  /* margin-left: 45px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.container {
+  border-radius: 10px;
+  background: #FFF;
+  box-shadow: 0px 8px 0px 0px rgba(0, 0, 0, 0.15);
+  width: 540px;
+  /* height: 474px; */
+  padding: 40px;
+  /* max-height: calc(100vh - 120px);  
+  overflow-y: auto; */
+  
+}
+
+.form-control {
+  margin-top: 20px;
+  position: relative;
+}
+
+.form-control:nth-child(1) {
+  margin-top: 0;
+}
+
+input {
+  width: 460px;
+  height: 56px;
+  flex-shrink: 0;
+  border-radius: 5px;
+  border: 1px solid #5E54A4;
+  background: #FFF;
+  color: #3D3B48;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 26px; /* 185.714% */
+  letter-spacing: 0.25px;
+  padding-left: 30px;
+  
+}
+.error-container {
+  display: flex;
+  justify-content: flex-end;
+  /* margin-top: 6px; */
+}
+small {
+  color: #FF7979;
+  text-align: right;
+  font-family: Poppins;
+  font-size: 11px;
+  font-style: italic;
+  font-weight: 500;
+  line-height: normal;
+  align-items: end;
+  margin-right: 5px;
+  display: none;
+  /* visibility: hidden; */
+  
+}
+
+i {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.form-control i.fa-check {
+  position: absolute;
+  top: 22px;
+  right: 15px;
+  color: #77E2B3;
+  text-align: right;
+  bottom: 0;
+  visibility: hidden;
+}
+.form-control i.fa-close {
+  position: absolute;
+  top: 22px;
+  right: 15px;
+  color: #FF7979;
+  text-align: right;
+  bottom: 0;
+  visibility: hidden;
+}
+
+.btn {
+  width: 460px;
+  height: 56px;
+  flex-shrink: 0;
+  border-radius: 5px;
+  background: #77E2B3;
+  box-shadow: 0px -4px 0px 0px rgba(0, 0, 0, 0.09) inset;
+
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 26px; /* 173.333% */
+  letter-spacing: 1px;
+
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.error input{
+  border: 1px solid #FF7979;
+}
+
+.success input {
+  border: 1px solid #77E2B3;
+}
+
+.form-control.error .error-container small {
+  color: #FF7979;
+  visibility: visible; 
+}
